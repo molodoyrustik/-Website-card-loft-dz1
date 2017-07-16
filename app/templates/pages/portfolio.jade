@@ -1,0 +1,19 @@
+extends ../layouts/main-layout.jade
+
+block title
+    title Портфолио
+
+block content
+    section.portfolio
+        h1.portfolio__title Портфолио
+        - var src = 'images/desktop/portfolio/'
+        - var worksData = [{src: 'deals-app.jpg', title: 'Deals App', desc: 'Продажа одежды', what: 'Лединг'},{src: 'dream-scapes.jpg', title: 'Dream-scapes', desc: 'Лагуна Люфтганза', what: 'Лединг'},{src: 'creative-studio.jpg', title: 'Creative studio', desc: 'Танцевальная студия', what: 'Лединг'},{src: 'studio-frog.jpg', title: 'Studio frog', desc: 'Мебельный магазин', what: 'Лединг'},{src: 'carbonara.jpg', title: 'Carbonara', desc: 'Итальянский ресторан', what: 'Лединг'}]
+        - worksData.forEach(function(elem) {
+        .works
+            a.works__link(href='#')
+                div.works__img-wrap
+                    img.works__img(src='#{src + elem.src}')
+                p.works__title= elem.title
+                p.works__description= elem.desc
+                p.works__what= elem.what
+        -})

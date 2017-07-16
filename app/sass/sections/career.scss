@@ -1,0 +1,147 @@
+.career{
+  margin: 0;
+  padding: 0;
+  @extend %clearfix;
+}
+.career-left{
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.career-left__img{
+  max-width: 220px;
+}
+.career__title{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  @include fira(medium);
+  font-size: 35px;
+  line-height: 45px;
+  color: $dark-gray;
+  text-align: left;
+}
+.career-right{
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.career-list{
+  margin: 0;
+  padding: 0;
+}
+.career__item{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: left;
+
+  &:first-child .career-block{
+    &::before{
+      display: none;
+    }
+  }
+  &:last-child .career-block{
+    margin-bottom: 0;
+    &::after{
+      display: none;
+    }
+  }
+}
+.career-block{
+  position: relative;
+  display: inline-block;
+  width: 380px;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: $dark-gray;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  transition: all .3s;
+
+  &:hover{
+    color: #ffffff;
+    background-color: $blue;
+  }
+  &:hover .career-block__year{
+    @include fira(bold);
+    font-size: 18px;
+    color: $blue;
+    &::after{
+      right: -25px;
+      margin-top: -10px;
+      border: 5px solid #94e0f2;
+    }
+  }
+  &::before, &::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    background-color: #dddddd;
+    left: -20px;
+  }
+
+  &::before{
+    top: 0;
+    bottom: 50%;
+    margin-bottom: 10px;
+  }
+  &::after{
+    bottom: 0;
+    top: 50%;
+    margin-top: 10px;
+  }
+
+
+}
+.career-block__year{
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin: 0;
+  margin-right: 35px;
+  margin-top: -13px;
+  font-size: 14px;
+  @include fira(light);
+  line-height: 26px;
+  color: #7b7b7b;
+  transition: all .5s;
+
+  &::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    z-index: 100;
+    display: block;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: $blue;
+    border-radius: 50%;
+  }
+}
+.career-block__title{
+  width: 280px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-size: 19px;
+}
+.career-block__post{
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  @include fira(light);
+}
+.career-block__time{
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  @include fira(light);
+}

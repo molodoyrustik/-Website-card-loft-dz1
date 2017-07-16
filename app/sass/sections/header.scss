@@ -1,0 +1,145 @@
+.header{
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  min-height: 80px;
+  background: #fff;
+  @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
+}
+.container{
+  @extend %clearfix;
+}
+.header__right{
+
+}
+.user{
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 0;
+}
+.user__avatar-wrap{
+  @include inline-block(middle);
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #bebebe;
+}
+.user__avatar{
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #ccc;
+}
+.user__username{
+   @include inline-block(middle);
+   margin: 0;
+   margin-left: 20px;
+   font-size: 18px;
+   @include fira();
+   line-height: 28px;
+   color: $dark-gray;
+ }
+.header__left{
+  float: left;
+  width: 50%;
+}
+.header__right{
+  position: relative;
+  float: right;
+  width: 50%;
+  margin-top: 30px;
+  text-align: right;
+  &:hover {
+    color: #e85f61;
+    border-color: #e85f61;
+    .contacts__dropdown {
+      opacity: 1;
+      right: -35px;
+    }
+  }
+}
+
+.contacts__link{
+  padding: 0;
+  color: $blue;
+  font-size: 18px;
+  @include fira(bold);
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration: none;
+  border-bottom: 4px dotted $blue;
+}
+
+.contacts__dropdown {
+  position: absolute;
+  top: 50px;
+  right: -999px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  transition: all ease-out .5s;
+  opacity: 0;
+  z-index: 1000;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 85px;
+    top: -20px;
+    border: 11px solid transparent;
+    border-bottom: 10px solid #fff;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    left: 85px;
+    top: -21px;
+    border: 11px solid transparent;
+    border-bottom: 11px solid #bebebe;
+  }
+}
+
+
+.contacts__item{
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #eeeeee;
+  &:last-child{
+    border-bottom: none;
+  }
+  cursor: pointer;
+}
+.contacts__dropdown-link{
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 50px;
+  padding-right: 20px;
+  @include fira(light);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: $dark-gray;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  &--mail{
+    background-image: url('../images/desktop/dropdown-sms.png');
+  }
+  &--phone{
+    background-image: url('../images/desktop/dropdown-phone.png');
+  }
+  &--skype{
+    background-image: url('../images/desktop/dropdown-skype.png');
+  }
+}
+
+
+
+
+

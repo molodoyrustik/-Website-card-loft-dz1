@@ -1,0 +1,52 @@
+.sidebar{
+  float: left;
+  width: 220px;
+  margin: 0;
+  padding: 0;
+}
+.navigation{
+  margin: 0;
+  padding: 0;
+}
+.navigation__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+.navigation__item{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  color: $dark-gray;
+  transition: all .3s;
+  &:hover{
+    color: $blue;
+  }
+  &:hover a{
+    color: $blue;
+    @include fira(bold);
+    border-color: $blue;
+  }
+}
+.navigation__item i{
+  font-size: 14px;
+}
+.navigation__item a{
+  color: $dark-gray;
+  transition: all .3s;
+}
+.navigation__link{
+  display: inline-block;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  @include fira(regular);
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  border-right: 5px solid transparent;
+}

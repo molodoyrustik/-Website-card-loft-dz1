@@ -1,0 +1,19 @@
+doctype
+html(lang="ru-RU")
+	include ../common/head.jade
+body
+	.wrapper
+		.main-content
+			<!-- / ========= header ========= \ -->
+			include ../common/header.jade
+			.content
+				.container
+					<!-- / ========= sidebar ========= \ -->
+					aside.sidebar
+						include ../common/navigatoin
+					<!-- / ========= page-content Изменяемый контент ========= \ -->
+					.page-content
+						<!-- / ========= Изменяемая часть каждой страницы ========= \ -->
+						block content
+	<!-- / ========= footer ========= \ -->
+	include ../common/footer.jade

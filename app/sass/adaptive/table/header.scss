@@ -1,0 +1,36 @@
+.header{
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.header__left{
+  float: left;
+  width: 220px;
+  margin-top: 10px;
+}
+.user{
+  margin-top: 0px;
+}
+
+.user__username{
+  width: 100px;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.header__right{
+  width: 60px;
+  height: 35px;
+  margin-top: 25px;
+}
+
+.contacts__link{
+  display: block;
+  width: 60px;
+  height: 35px;
+  background: url(../images/desktop/mobile.png) no-repeat center right;
+  font-size: 0;
+  border: none;
+
+}

@@ -1,0 +1,84 @@
+.page-content{
+  float: right;
+  width: 700px;
+}
+.about{
+  margin: 0;
+  padding: 0;
+  @extend %clearfix
+}
+.about__left{
+  float: left;
+  width: 290px;
+}
+.about__avatar-wrap{
+  width: 220px;
+  height: 220px;
+  margin: 0;
+  margin-left: 35px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+.about__avatar-img{
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.about__right{
+  float: right;
+  width: 380px;
+}
+.about__right__title{
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  @include fira(medium);
+  font-size: 35px;
+  line-height: 45px;
+  color: $dark-gray;
+}
+.about__right__text-wrap{
+  height: 290px;
+  margin-bottom: 50px;
+  overflow-y: auto;
+  p{
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    @include fira(light);
+    font-size: 18px;
+    line-height: 26px;
+
+  }
+}
+
+.btn{
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+  padding-right: 12px;
+  @include fira(bold);
+  font-size: 14px;
+  line-height: 28px;
+  text-decoration: none;
+  color: $red;
+  border: 2px solid $red;
+  border-radius: 20px;
+  &:hover{
+    background-color: $red;
+    color: white;
+  }
+}
+.btn--download{
+  float: right;
+  background-image: url('../images/desktop/about/icon-download.png');
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  &:hover{
+    background-image: url('../images/desktop/about/icon-download-actvie.png');
+  }
+}

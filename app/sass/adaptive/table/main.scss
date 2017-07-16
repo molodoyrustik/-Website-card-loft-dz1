@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+  .container {
+    width: 450px;
+    padding: 0px 10px;
+  }
+  @import "footer";
+  @import "page-content";
+  @import "sidebar";
+  @import "header";
+  @import "career";
+  @import "portfolio";
+}

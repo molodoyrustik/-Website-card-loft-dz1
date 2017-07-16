@@ -1,0 +1,81 @@
+.portfolio{
+  font-size: 0;
+}
+.portfolio__title{
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  @include fira(medium);
+  font-size: 35px;
+  line-height: 45px;
+  color: $dark-gray;
+  text-align: left;
+}
+.works{
+  @include inline-block();
+  width: 220px;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  padding: 0;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  box-sizing: border-box;
+  transition: all .5s;
+  &:hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.8);
+  }
+}
+.works:hover .works__title{
+  color: $red;
+}
+.works:nth-child(3n-1){
+  margin-left: 0;
+}
+.works__img{
+  max-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.works__title{
+  display: block;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  padding-left: 20px;
+  @include fira();
+  font-size: 21px;
+  line-height: 24px;
+  color: $blue;
+  text-decoration: none;
+  transition: all .5s;
+}
+.works__description{
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-left: 20px;
+  @include fira(light);
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark-gray;
+}
+.works__what{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-left: 35px;
+  @include fira(bold);
+  font-size: 12px;
+  line-height: 21px;
+  color: #aeaeae;
+  background: url('../images/desktop/portfolio/icon-monitor.png') no-repeat 10px center;
+}
+
+.works__link {
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+// variables
+$white: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+$gray: #727272;
+$dark-gray: #414141;
+
+// layout
+@import "_misc/normalize";
+@import "_misc/fonts";
+@import "plugins/font-awesome";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+// styles
+@import "sections/header";
+@import "sections/footer";
+@import "sections/sidebar";
+@import "sections/page-content";
+@import 'sections/hello';
+@import "sections/portfolio";
+@import "sections/career";
+
+//adaptive
+@import "adaptive/media";
+
